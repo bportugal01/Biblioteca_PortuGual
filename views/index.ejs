@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inclusão de Autores</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Biblioteca PortoGual</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://localhost:3000/autores/add">Cadastrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://localhost:3000/autores/listar">Listar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  &nbsp;
+  <main class="container">
+    <div class="bg-body-secondary p-5 rounded">
+
+      <!-- Introdução ao Sistema -->
+      <h2>Introdução ao Sistema</h2>
+      <p>Bem-vindo ao nosso pequeno sistema desenvolvido utilizando Node.js, Express, MySQL e Bootstrap. Este sistema
+        foi criado para proporcionar uma experiência eficiente e intuitiva, utilizando tecnologias modernas para atender
+        às suas necessidades.</p>
+
+      <!-- Node.js e Express -->
+      <h2>Node.js e Express</h2>
+      <p>Node.js é uma plataforma de execução de JavaScript construída sobre o motor V8 do Google Chrome. Ela permite a
+        execução de código JavaScript no lado do servidor, proporcionando alta performance e escalabilidade. Juntamente
+        com o framework Express, Node.js simplifica o desenvolvimento de aplicações web robustas e eficientes.</p>
+
+      <!-- MySQL -->
+      <h2>MySQL</h2>
+      <p>O sistema utiliza o banco de dados MySQL para armazenar e gerenciar os dados de maneira eficiente. O MySQL é um
+        sistema de gerenciamento de banco de dados relacional amplamente utilizado na indústria de desenvolvimento web.
+      </p>
+
+      <!-- Bootstrap -->
+      <h2>Bootstrap</h2>
+      <p>Para a interface gráfica do sistema, utilizamos o Bootstrap, um framework de código aberto que simplifica o
+        desenvolvimento de interfaces responsivas e estilizadas. O Bootstrap oferece uma variedade de componentes e
+        estilos prontos para uso, facilitando a criação de páginas web atrativas e amigáveis.</p>
+
+      <!-- Mensagem de Boas-vindas -->
+      <h2>Mensagem de Boas-vindas</h2>
+      <p>Esperamos que aproveite a utilização deste sistema e que ele atenda de maneira eficaz às suas demandas. Caso
+        tenha alguma dúvida ou sugestão, não hesite em entrar em contato conosco.</p>
+
+      <!-- Botão de Visualização -->
+      <a href="http://localhost:3000/autores/listar" class="btn btn-bd-primary">Visualizar</a>
+
+    </div>
+
+  </main>
+  <br>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
